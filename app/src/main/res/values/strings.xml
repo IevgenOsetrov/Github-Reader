@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Github Reader</string>
+    <string name="error_check_internet_connection">Check Internet connection</string>
+    <string name="press_back_more">Please, press back once more to exit</string>
+    <string name="followers">followers</string>
+    <string name="following">following</string>
+    <string name="repositories">Repositories - %1$d</string>
+    <string name="language">Language: %1$s</string>
+    <string name="input_username">Input username to know more:</string>
+    <string name="not_found">Users not found</string>
+    <string name="search">Search</string>
+    <string name="user_details">User details</string>
+</resources>
