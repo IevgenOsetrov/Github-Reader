@@ -10,6 +10,7 @@ import com.dev.joks.githubreader.service.model.UserInfo
 import com.google.gson.Gson
 import com.wajahatkarim3.easyvalidation.core.view_ktx.contains
 import io.reactivex.Observable
+import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.BiFunction
 import io.reactivex.schedulers.Schedulers
@@ -22,7 +23,7 @@ class UserDetailsViewModel : BaseViewModel() {
     val paginationResponse: MutableLiveData<RepositoriesResponse> = MutableLiveData()
 
     fun getUserData(username: String?) {
-        getCompositeDisposable().add(Observable.zip(
+        getCompositeDisposable().add(Single.zip(
             AppApi.apiService.getUserInfo(username),
             AppApi.apiService.getUserRepositories(username),
             BiFunction { userInfo: UserInfo, repos: Response<ResponseBody> ->
