@@ -1,7 +1,6 @@
 package com.dev.joks.githubreader.screens.search
 
 import android.arch.lifecycle.MutableLiveData
-import android.util.Patterns
 import android.view.View
 import com.dev.joks.githubreader.BuildConfig
 import com.dev.joks.githubreader.screens.base.BaseViewModel

@@ -1,8 +1,7 @@
 package com.dev.joks.githubreader.service
 
-import com.dev.joks.githubreader.service.model.Repository
 import com.dev.joks.githubreader.service.model.UserInfo
-import io.reactivex.Observable
+import io.reactivex.Single
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.GET
@@ -14,16 +13,16 @@ interface ApiService {
     @GET("users/{login}")
     fun getUserInfo(
         @Path("login") login: String?
-    ): Observable<UserInfo>
+    ): Single<UserInfo>
 
     @GET("users/{login}/repos")
     fun getUserRepositories(
         @Path("login") login: String?
-    ): Observable<Response<ResponseBody>>
+    ): Single<Response<ResponseBody>>
 
     @GET
-    fun searchUsers(@Url url: String?): Observable<Response<ResponseBody>>
+    fun searchUsers(@Url url: String?): Single<Response<ResponseBody>>
 
     @GET
-    fun getUsersRepos(@Url url: String?): Observable<Response<ResponseBody>>
+    fun getUsersRepos(@Url url: String?): Single<Response<ResponseBody>>
 }
